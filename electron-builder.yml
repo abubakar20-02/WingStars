@@ -1,0 +1,40 @@
+appId: com.example.nextron
+productName: Wing Star
+copyright: Copyright © 2024 Muhammad Abubakar
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+extraFiles:
+  - from: scripts
+    to: resources/scripts
+    filter:
+      - '**/*'
+
+  - from: html
+    to: resources/html
+    filter:
+      - '**/*'
+
+  - from: template
+    to: resources/template
+    filter:
+      - '**/*'
+  - from: images
+    to: resources/images
+    filter:
+      - '**/*'
+publish: null
+win:
+  target:
+    - nsis
+  icon: resources/wingstar-logo.ico
+  forceCodeSigning: false
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true

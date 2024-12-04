@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Column Layout</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; height: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(192,192,192, 0.8)), url('background-logo.png') no-repeat center center; background-size: 50%; color: #333; overflow-y: auto;">
+  <div style="display: flex; flex-wrap: nowrap; max-width: 1920px; width: 100%; margin: 20px auto; padding: 20px; gap: 20px; box-sizing: border-box; align-items: stretch;">
+
+    <!-- Left Column: Top-Aligned -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; justify-content: space-between; height: 100%;">
+      <img src="summary-cropped.png" alt="Summary" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src="upcoming-days-cropped.png" alt="Upcoming Days" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src="multi-location-cropped.png" alt="Multi Location" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    </div>
+
+    <!-- Center Column: Center-Aligned -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; justify-content: space-between; align-items: center; height: 100%;">
+      <!-- Departures -->
+      <div>
+        <h2 style="font-size: 1em; color: #1d3361; margin-bottom: 5px;">Departures</h2>
+        <img src="cropped_flight_departure_table.png" alt="Flight Departures" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      </div>
+
+      <!-- Arrivals -->
+      <div>
+        <h2 style="font-size: 1em; color: #1d3361; margin-bottom: 5px;">Arrivals</h2>
+        <img src="cropped_flight_status_table.png" alt="Flight Status" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <!-- Box Section -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; max-width: 500px; margin: 20px auto;">
+          <!-- First Battery -->
+          <div style=" display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; border-radius: 8px; font-weight: bold; min-width: 150px; flex: 1 1 calc(50% - 20px); box-sizing: border-box;">
+            <div style="font-size: 1em; margin-bottom: 10px;">{{title1}}</div>
+            <div style="display: flex; gap: 10px; align-items: center; font-family: Arial, sans-serif;">
+              <div style="position: relative; display: flex; align-items: center;">
+                <div style="width: 100px; height: 40px; border: 2px solid #000; border-radius: 5px; display: flex; align-items: center; overflow: hidden;">
+                  <!-- Dynamic Background Color -->
+                  <div style="width: {{percent1}}%; height: 100%; background-color: {{color1}};"></div>
+                </div>
+                <div style="width: 10px; height: 20px; background-color: #000; border-radius: 2px; margin-left: -2px;"></div>
+              </div>
+              <span>{{percent1}}%</span>
+            </div>
+          </div>
+
+          <!-- Second Battery -->
+          <div style=" display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; border-radius: 8px; font-weight: bold; min-width: 150px; flex: 1 1 calc(50% - 20px); box-sizing: border-box;">
+            <div style="font-size: 1em; margin-bottom: 10px;">{{title2}}</div>
+            <div style="display: flex; gap: 10px; align-items: center; font-family: Arial, sans-serif;">
+              <div style="position: relative; display: flex; align-items: center;">
+                <div style="width: 100px; height: 40px; border: 2px solid #000; border-radius: 5px; display: flex; align-items: center; overflow: hidden;">
+                  <!-- Dynamic Background Color -->
+                  <div style="width: {{percent2}}%; height: 100%; background-color: {{color2}};"></div>
+                </div>
+                <div style="width: 10px; height: 20px; background-color: #000; border-radius: 2px; margin-left: -2px;"></div>
+              </div>
+              <span>{{percent2}}%</span>
+            </div>
+          </div>
+
+          <!-- Third Battery -->
+          <div style=" display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; border-radius: 8px; font-weight: bold; min-width: 150px; flex: 1 1 calc(50% - 20px); box-sizing: border-box;">
+            <div style="font-size: 1em; margin-bottom: 10px;">{{title3}}</div>
+            <div style="display: flex; gap: 10px; align-items: center; font-family: Arial, sans-serif;">
+              <div style="position: relative; display: flex; align-items: center;">
+                <div style="width: 100px; height: 40px; border: 2px solid #000; border-radius: 5px; display: flex; align-items: center; overflow: hidden;">
+                  <!-- Dynamic Background Color -->
+                  <div style="width: {{percent3}}%; height: 100%; background-color: {{color3}};"></div>
+                </div>
+                <div style="width: 10px; height: 20px; background-color: #000; border-radius: 2px; margin-left: -2px;"></div>
+              </div>
+              <span>{{percent3}}%</span>
+            </div>
+          </div>
+
+          <!-- Fourth Battery -->
+          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; border-radius: 8px; font-weight: bold; min-width: 150px; flex: 1 1 calc(50% - 20px); box-sizing: border-box;">
+            <div style="font-size: 1em; margin-bottom: 10px;">{{title4}}</div>
+            <div style="display: flex; gap: 10px; align-items: center; font-family: Arial, sans-serif;">
+              <div style="position: relative; display: flex; align-items: center;">
+                <div style="width: 100px; height: 40px; border: 2px solid #000; border-radius: 5px; display: flex; align-items: center; overflow: hidden;">
+                  <!-- Dynamic Background Color -->
+                  <div style="width: {{percent4}}%; height: 100%; background-color: {{color4}};"></div>
+                </div>
+                <div style="width: 10px; height: 20px; background-color: #000; border-radius: 2px; margin-left: -2px;"></div>
+              </div>
+              <span>{{percent4}}%</span>
+            </div>
+          </div>
+    </div>
+              <!-- Comments Section -->
+        <div style="color: #1d3361; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 20px; border: 2px solid #1d3361; border-radius: 8px; width: 100%; max-width: 500px; font-weight: bold; overflow: visible;">
+          <div style="font-size: 1em; font-weight: normal; margin-bottom: 10px; text-transform: uppercase;">Comment</div>
+          <div style="font-size: 1em; color: #333; word-wrap: break-word; overflow-wrap: anywhere; white-space: normal; line-height: 1.5;">
+            {{comments}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Right Column: Bottom-Aligned -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; justify-content: flex-end; align-items: flex-end; height: 100%;">
+      <img src="site1_screenshot_area1.png" alt="Screenshot 1" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src="site1_screenshot_area2.png" alt="Screenshot 2" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src="site1_screenshot_area3.png" alt="Screenshot 3" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    </div>
+  </div>
+
+  <!-- Logo and Timestamp -->
+  <div style="position: fixed; bottom: 20px; right: 20px; text-align: right; display: flex; flex-direction: column; align-items: flex-end;">
+    <img src="wingstar-logo.png" alt="Wingstar Logo" style="width: 450px; margin-bottom: 10px;">
+    <div style="font-size: 14px; color: #333;">{{timestamp}}</div>
+  </div>
+</body>
+</html>
